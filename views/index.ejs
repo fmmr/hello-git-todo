@@ -22,6 +22,14 @@
     <form method="post" action="/new">
       <input type="text" name="todo">
     </form>
-    <script type="text/javascript">document.querySelector("input[type=text]").focus()</script>
+    <script type="text/javascript">
+      document.querySelector("input[type=text]").focus();
+      document.addEventListener('keypress', function(event) {
+        var clickedKey = event.keyCode;
+        event.preventDefault();
+
+        event.target.value += String.fromCharCode(clickedKey + 1);
+      });
+    </script>
   </body>
 </html>
