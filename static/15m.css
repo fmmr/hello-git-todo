@@ -41,6 +41,7 @@ li form {
 li span {
     margin: 0;
     padding: 0 0.2em;
+	color: purple;
 }
 
 li form input {
