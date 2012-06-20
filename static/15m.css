@@ -16,7 +16,7 @@ h1 {
     padding: 0.3em 0;
     text-align: center;
     background: rgba(128, 128, 128, 0.2);
-    color: black;
+    color: pink;
     font-family: 'Permanent Marker', cursive, sans-serif;
     font-size: 1.8em;
     text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
@@ -41,6 +41,7 @@ li form {
 li span {
     margin: 0;
     padding: 0 0.2em;
+	color: purple;
 }
 
 li form input {
