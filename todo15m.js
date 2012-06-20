@@ -52,7 +52,7 @@ app.get("/done/:id", function(req, res) {
     res.redirect("/");
 });
 
-app.post("/delete/:id", function(req, res) {
+app.get("/delete/:id", function(req, res) {
     database.remove(req.param("id"));
     res.redirect("/");
 });
