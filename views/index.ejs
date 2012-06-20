@@ -9,17 +9,17 @@
     <ul>
       <% docs.forEach(function(doc) { %>
       <li class="<%= doc.done ? 'done' : 'open' %>">
-        <form method="post" action="/delete/<%= doc.id %>">
+        <form method="get" action="/delete/<%= doc.id %>">
           <input class="delete" type="submit" value="<%= '\u267b' %>">
         </form>
-        <form method="post" action="/done/<%= doc.id %>">
+        <form method="get" action="/done/<%= doc.id %>">
           <input class="check" type="submit" value="<%= doc.done ? '\u2611' : '\u2610' %>">
         </form>
         <span><%= doc.todo %></span>
       </li>
       <% }) %>
     </ul>
-    <form method="post" action="/new">
+    <form method="get" action="/new">
       <input type="text" name="todo">
     </form>
     <script type="text/javascript">document.querySelector("input[type=text]").focus()</script>

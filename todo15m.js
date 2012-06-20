@@ -37,7 +37,7 @@ app.get("/", function(req, res) {
     res.render("index.ejs", { docs: database.docs, layout: false });
 });
 
-app.post("/new", function(req, res) {
+app.get("/new", function(req, res) {
     var doc = {
         todo: req.param("todo"),
         done: false
@@ -46,7 +46,7 @@ app.post("/new", function(req, res) {
     res.redirect("/");
 });
 
-app.post("/done/:id", function(req, res) {
+app.get("/done/:id", function(req, res) {
     var doc = database.find(req.param("id"));
     doc.done = !doc.done;
     res.redirect("/");
