@@ -37,7 +37,7 @@ app.get("/", function(req, res) {
     res.render("index.ejs", { docs: database.docs, layout: false });
 });
 
-app.get("/new", function(req, res) {
+app.post("/new", function(req, res) {
     var doc = {
         todo: req.param("todo"),
         done: false
@@ -46,13 +46,13 @@ app.get("/new", function(req, res) {
     res.redirect("/");
 });
 
-app.get("/done/:id", function(req, res) {
+app.post("/done/:id", function(req, res) {
     var doc = database.find(req.param("id"));
     doc.done = !doc.done;
     res.redirect("/");
 });
 
-app.get("/delete/:id", function(req, res) {
+app.post("/delete/:id", function(req, res) {
     database.remove(req.param("id"));
     res.redirect("/");
 });
