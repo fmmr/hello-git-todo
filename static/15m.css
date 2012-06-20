@@ -15,12 +15,12 @@ h1 {
     margin: 1em 0;
     padding: 0.3em 0;
     text-align: center;
-    background: rgba(128, 128, 128, 0.2);
+    background: rgba(128, 0, 0, 0.2);
     color: black;
     font-family: 'Permanent Marker', cursive, sans-serif;
     font-size: 1.8em;
-    text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
-    box-shadow: 0 0 16px rgba(128, 128, 128, 0.4);
+    text-shadow: rgba(128, 0, 0, 0.2) 0 2px 5px;
+    box-shadow: 0 0 16px rgba(128, 0, 0, 0.4);
 }
 
 ul {
